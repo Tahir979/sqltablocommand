@@ -1,7 +1,7 @@
 --1--
 CREATE TABLE IF NOT EXISTS employee(
-  id INTEGER,
-  name VARCHAR(50),
+  id INTEGER PRİMARY KEY,
+  name VARCHAR(50) NOT NULL,
   birthday DATE,
   email VARCHAR(100)
 );
@@ -58,5 +58,15 @@ insert into employee (id, name, birthday, email) values (49, 'Blancha', '2022-04
 insert into employee (id, name, birthday, email) values (50, 'Dyna', '2022-10', 'dleather1d@macromedia.com');
 --3--
 UPDATE employee SET name = 'Dina' WHERE email = 'dleather1d@macromedia.com';
+UPDATE employee SET birthday = '1996-11-28' WHERE email ='obouts1a@mit.edu';
+UPDATE employee SET name = 'Nuray' WHERE id = 1;
+UPDATE employee SET email = 'sevginingucu@gmail.com' WHERE name = 'Georgeanne';
+UPDATE employee SET name = 'yusuf' WHERE birthday = '1995-08-08';
+
 --4--
 DELETE FROM employee WHERE name = 'Dina';
+DELETE FROM employee WHERE birthday = '2021-12-19';
+DELETE FROM employee WHERE id = '31';
+DELETE FROM employee WHERE email = 'dleather1d@macromedia.com';
+DELETE FROM employee WHERE id = '28';
+
